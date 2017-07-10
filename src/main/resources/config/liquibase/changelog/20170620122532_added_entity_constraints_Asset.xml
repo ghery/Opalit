@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Asset.
+    -->
+    <changeSet id="20170620122532-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="market_id"
+                                 baseTableName="asset"
+                                 constraintName="fk_asset_market_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="market"/>
+
+        <addForeignKeyConstraint baseColumnNames="currency_id"
+                                 baseTableName="asset"
+                                 constraintName="fk_asset_currency_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="currency"/>
+
+        <addForeignKeyConstraint baseColumnNames="country_id"
+                                 baseTableName="asset"
+                                 constraintName="fk_asset_country_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="country"/>
+
+        <addForeignKeyConstraint baseColumnNames="city_id"
+                                 baseTableName="asset"
+                                 constraintName="fk_asset_city_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="city"/>
+
+        <addForeignKeyConstraint baseColumnNames="sector_id"
+                                 baseTableName="asset"
+                                 constraintName="fk_asset_sector_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="sector"/>
+
+    </changeSet>
+</databaseChangeLog>

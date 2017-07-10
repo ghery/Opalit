@@ -1,0 +1,56 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "collector",
+            "otherEntityName": "book",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "op",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "hi",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "lo",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "la",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "day",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "vol",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "pc",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "time",
+            "fieldType": "ZonedDateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20170620122541",
+    "entityTableName": "h_book",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "no"
+}

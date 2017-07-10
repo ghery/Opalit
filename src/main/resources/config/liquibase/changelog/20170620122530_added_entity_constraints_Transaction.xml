@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Transaction.
+    -->
+    <changeSet id="20170620122530-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="book_id"
+                                 baseTableName="transaction"
+                                 constraintName="fk_transaction_book_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="book"/>
+
+        <addForeignKeyConstraint baseColumnNames="asset_id"
+                                 baseTableName="transaction"
+                                 constraintName="fk_transaction_asset_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="asset"/>
+
+        <addForeignKeyConstraint baseColumnNames="currency_id"
+                                 baseTableName="transaction"
+                                 constraintName="fk_transaction_currency_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="currency"/>
+
+        <addForeignKeyConstraint baseColumnNames="broker_id"
+                                 baseTableName="transaction"
+                                 constraintName="fk_transaction_broker_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="people"/>
+
+        <addForeignKeyConstraint baseColumnNames="primebroker_id"
+                                 baseTableName="transaction"
+                                 constraintName="fk_transaction_primebroker_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="people"/>
+
+    </changeSet>
+</databaseChangeLog>

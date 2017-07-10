@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Fund.
+    -->
+    <changeSet id="20170623090427-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="fund_id"
+                                 baseTableName="fund"
+                                 constraintName="fk_fund_fund_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="asset"/>
+
+        <addForeignKeyConstraint baseColumnNames="main_folio_id"
+                                 baseTableName="fund"
+                                 constraintName="fk_fund_main_folio_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="book"/>
+
+    </changeSet>
+</databaseChangeLog>

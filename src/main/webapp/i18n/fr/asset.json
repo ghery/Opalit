@@ -1,0 +1,39 @@
+{
+    "opalitApp": {
+        "asset" : {
+            "home": {
+                "title": "Assets",
+                "createLabel": "Créer un nouveau Asset",
+                "createOrEditLabel": "Créer ou éditer un Asset"
+            },
+            "created": "Un nouveau Asset a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Asset avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Asset avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Asset {{ id }} ?"
+            },
+            "detail": {
+                "title": "Asset"
+            },
+            "name": "Name",
+            "reference": "Reference",
+            "type": "Type",
+            "quotity": "Quotity",
+            "comments": "Comments",
+            "gdate": "Gdate",
+            "gnumbera": "Gnumbera",
+            "genuma": "Genuma",
+            "gnumberb": "Gnumberb",
+            "gdateb": "Gdateb",
+            "genumb": "Genumb",
+            "genumc": "Genumc",
+            "genumd": "Genumd",
+            "gdatec": "Gdatec",
+            "market": "Market",
+            "currency": "Currency",
+            "country": "Country",
+            "city": "City",
+            "sector": "Sector"
+        }
+    }
+}

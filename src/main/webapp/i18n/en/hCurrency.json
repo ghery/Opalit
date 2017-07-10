@@ -1,0 +1,29 @@
+{
+    "opalitApp": {
+        "hCurrency" : {
+            "home": {
+                "title": "H Currencies",
+                "createLabel": "Create a new H Currency",
+                "createOrEditLabel": "Create or edit a H Currency"
+            },
+            "created": "A new H Currency is created with identifier {{ param }}",
+            "updated": "A H Currency is updated with identifier {{ param }}",
+            "deleted": "A H Currency is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete H Currency {{ id }}?"
+            },
+            "detail": {
+                "title": "H Currency"
+            },
+            "op": "Op",
+            "hi": "Hi",
+            "lo": "Lo",
+            "la": "La",
+            "day": "Day",
+            "vol": "Vol",
+            "pc": "Pc",
+            "time": "Time",
+            "collector": "Collector"
+        }
+    }
+}

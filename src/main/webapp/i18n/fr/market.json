@@ -1,0 +1,24 @@
+{
+    "opalitApp": {
+        "market" : {
+            "home": {
+                "title": "Markets",
+                "createLabel": "Créer un nouveau Market",
+                "createOrEditLabel": "Créer ou éditer un Market"
+            },
+            "created": "Un nouveau Market a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Market avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Market avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Market {{ id }} ?"
+            },
+            "detail": {
+                "title": "Market"
+            },
+            "mnemo": "Mnemo",
+            "name": "Name",
+            "currency": "Currency",
+            "city": "City"
+        }
+    }
+}

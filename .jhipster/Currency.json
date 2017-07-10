@@ -1,0 +1,27 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "mnemo",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 3
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "isReversed",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20170620122533",
+    "entityTableName": "currency",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "no"
+}

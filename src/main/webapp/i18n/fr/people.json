@@ -1,0 +1,21 @@
+{
+    "opalitApp": {
+        "people" : {
+            "home": {
+                "title": "People",
+                "createLabel": "Créer un nouveau People",
+                "createOrEditLabel": "Créer ou éditer un People"
+            },
+            "created": "Un nouveau People a été créé avec l'identifiant {{ param }}",
+            "updated": "Le People avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le People avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le People {{ id }} ?"
+            },
+            "detail": {
+                "title": "People"
+            },
+            "name": "Name"
+        }
+    }
+}

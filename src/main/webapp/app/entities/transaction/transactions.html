@@ -1,0 +1,104 @@
+<div>
+    <h2 data-translate="opalitApp.transaction.home.title">Transactions</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="transaction.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="opalitApp.transaction.home.createLabel">
+                        Create new Transaction
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.reset()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="idPosition"><span data-translate="opalitApp.transaction.idPosition">Id Position</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="price"><span data-translate="opalitApp.transaction.price">Price</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="quantity"><span data-translate="opalitApp.transaction.quantity">Quantity</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="type"><span data-translate="opalitApp.transaction.type">Type</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="status"><span data-translate="opalitApp.transaction.status">Status</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="tradeDate"><span data-translate="opalitApp.transaction.tradeDate">Trade Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="settlementDate"><span data-translate="opalitApp.transaction.settlementDate">Settlement Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="amount"><span data-translate="opalitApp.transaction.amount">Amount</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="marketFees"><span data-translate="opalitApp.transaction.marketFees">Market Fees</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="brokerFees"><span data-translate="opalitApp.transaction.brokerFees">Broker Fees</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="clientFees"><span data-translate="opalitApp.transaction.clientFees">Client Fees</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="forexSpot"><span data-translate="opalitApp.transaction.forexSpot">Forex Spot</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="comments"><span data-translate="opalitApp.transaction.comments">Comments</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="boComment"><span data-translate="opalitApp.transaction.boComment">Bo Comment</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="cfd"><span data-translate="opalitApp.transaction.cfd">Cfd</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="book.id"><span data-translate="opalitApp.transaction.book">Book</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="asset.id"><span data-translate="opalitApp.transaction.asset">Asset</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="currency.id"><span data-translate="opalitApp.transaction.currency">Currency</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="broker.id"><span data-translate="opalitApp.transaction.broker">Broker</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="primebroker.id"><span data-translate="opalitApp.transaction.primebroker">Primebroker</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody infinite-scroll="vm.loadPage(vm.page + 1)" infinite-scroll-disabled="vm.page >= vm.links['last']">
+                <tr ng-repeat="transaction in vm.transactions track by transaction.id">
+                    <td><a ui-sref="transaction-detail({id:transaction.id})">{{transaction.id}}</a></td>
+                    <td>{{transaction.idPosition}}</td>
+                    <td>{{transaction.price}}</td>
+                    <td>{{transaction.quantity}}</td>
+                    <td>{{transaction.type}}</td>
+                    <td>{{transaction.status}}</td>
+                    <td>{{transaction.tradeDate | date:'mediumDate'}}</td>
+                    <td>{{transaction.settlementDate | date:'mediumDate'}}</td>
+                    <td>{{transaction.amount}}</td>
+                    <td>{{transaction.marketFees}}</td>
+                    <td>{{transaction.brokerFees}}</td>
+                    <td>{{transaction.clientFees}}</td>
+                    <td>{{transaction.forexSpot}}</td>
+                    <td>{{transaction.comments}}</td>
+                    <td>{{transaction.boComment}}</td>
+                    <td>{{transaction.cfd}}</td>
+                    <td>
+                        <a ui-sref="book-detail({id:transaction.book.id})">{{transaction.book.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="asset-detail({id:transaction.asset.id})">{{transaction.asset.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="currency-detail({id:transaction.currency.id})">{{transaction.currency.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="people-detail({id:transaction.broker.id})">{{transaction.broker.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="people-detail({id:transaction.primebroker.id})">{{transaction.primebroker.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="transaction-detail({id:transaction.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="transaction.edit({id:transaction.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="transaction.delete({id:transaction.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

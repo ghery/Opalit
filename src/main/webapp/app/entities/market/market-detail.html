@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span data-translate="opalitApp.market.detail.title">Market</span> {{vm.market.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="opalitApp.market.mnemo">Mnemo</span></dt>
+        <dd>
+            <span>{{vm.market.mnemo}}</span>
+        </dd>
+        <dt><span data-translate="opalitApp.market.name">Name</span></dt>
+        <dd>
+            <span>{{vm.market.name}}</span>
+        </dd>
+        <dt><span data-translate="opalitApp.market.currency">Currency</span></dt>
+        <dd>
+            <a ui-sref="currency-detail({id:vm.market.currency.id})">{{vm.market.currency.id}}</a>
+        </dd>
+        <dt><span data-translate="opalitApp.market.city">City</span></dt>
+        <dd>
+            <a ui-sref="city-detail({id:vm.market.city.id})">{{vm.market.city.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="market-detail.edit({id:vm.market.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,15 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "sector",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170620122538",
+    "entityTableName": "sector",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "no"
+}

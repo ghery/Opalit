@@ -1,0 +1,15 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "marketvalue",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20170620122544",
+    "entityTableName": "calcul",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "no"
+}

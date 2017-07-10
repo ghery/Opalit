@@ -1,0 +1,23 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "fund",
+            "otherEntityName": "asset",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "mainFolio",
+            "otherEntityName": "book",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [],
+    "changelogDate": "20170623090427",
+    "entityTableName": "fund",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "no"
+}

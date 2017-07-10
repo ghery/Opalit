@@ -1,0 +1,21 @@
+{
+    "opalitApp": {
+        "calcul" : {
+            "home": {
+                "title": "Calculs",
+                "createLabel": "Créer un nouveau Calcul",
+                "createOrEditLabel": "Créer ou éditer un Calcul"
+            },
+            "created": "Un nouveau Calcul a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Calcul avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Calcul avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Calcul {{ id }} ?"
+            },
+            "detail": {
+                "title": "Calcul"
+            },
+            "marketvalue": "Marketvalue"
+        }
+    }
+}

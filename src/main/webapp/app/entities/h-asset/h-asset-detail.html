@@ -1,0 +1,55 @@
+
+<div>
+    <h2><span data-translate="opalitApp.hAsset.detail.title">H Asset</span> {{vm.hAsset.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="opalitApp.hAsset.op">Op</span></dt>
+        <dd>
+            <span>{{vm.hAsset.op}}</span>
+        </dd>
+        <dt><span data-translate="opalitApp.hAsset.hi">Hi</span></dt>
+        <dd>
+            <span>{{vm.hAsset.hi}}</span>
+        </dd>
+        <dt><span data-translate="opalitApp.hAsset.lo">Lo</span></dt>
+        <dd>
+            <span>{{vm.hAsset.lo}}</span>
+        </dd>
+        <dt><span data-translate="opalitApp.hAsset.la">La</span></dt>
+        <dd>
+            <span>{{vm.hAsset.la}}</span>
+        </dd>
+        <dt><span data-translate="opalitApp.hAsset.day">Day</span></dt>
+        <dd>
+            <span>{{vm.hAsset.day | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="opalitApp.hAsset.vol">Vol</span></dt>
+        <dd>
+            <span>{{vm.hAsset.vol}}</span>
+        </dd>
+        <dt><span data-translate="opalitApp.hAsset.pc">Pc</span></dt>
+        <dd>
+            <span>{{vm.hAsset.pc}}</span>
+        </dd>
+        <dt><span data-translate="opalitApp.hAsset.time">Time</span></dt>
+        <dd>
+            <span>{{vm.hAsset.time | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="opalitApp.hAsset.collector">Collector</span></dt>
+        <dd>
+            <a ui-sref="asset-detail({id:vm.hAsset.collector.id})">{{vm.hAsset.collector.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="h-asset-detail.edit({id:vm.hAsset.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,15 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170620122543",
+    "entityTableName": "people",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "no"
+}

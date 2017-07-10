@@ -1,0 +1,108 @@
+package com.mycompany.myapp.domain;
+
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
+import javax.persistence.*;
+import java.io.Serializable;
+import java.util.Objects;
+
+/**
+ * A Country.
+ */
+@Entity
+@Table(name = "country")
+@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+public class Country implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "mnemo")
+    private String mnemo;
+
+    @Column(name = "name")
+    private String name;
+
+    @ManyToOne
+    private Zone zone;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getMnemo() {
+        return mnemo;
+    }
+
+    public Country mnemo(String mnemo) {
+        this.mnemo = mnemo;
+        return this;
+    }
+
+    public void setMnemo(String mnemo) {
+        this.mnemo = mnemo;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Country name(String name) {
+        this.name = name;
+        return this;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Zone getZone() {
+        return zone;
+    }
+
+    public Country zone(Zone zone) {
+        this.zone = zone;
+        return this;
+    }
+
+    public void setZone(Zone zone) {
+        this.zone = zone;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Country country = (Country) o;
+        if (country.getId() == null || getId() == null) {
+            return false;
+        }
+        return Objects.equals(getId(), country.getId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(getId());
+    }
+
+    @Override
+    public String toString() {
+        return "Country{" +
+            "id=" + getId() +
+            ", mnemo='" + getMnemo() + "'" +
+            ", name='" + getName() + "'" +
+            "}";
+    }
+}

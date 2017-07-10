@@ -1,0 +1,29 @@
+{
+    "opalitApp": {
+        "hBook" : {
+            "home": {
+                "title": "H Books",
+                "createLabel": "Create a new H Book",
+                "createOrEditLabel": "Create or edit a H Book"
+            },
+            "created": "A new H Book is created with identifier {{ param }}",
+            "updated": "A H Book is updated with identifier {{ param }}",
+            "deleted": "A H Book is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete H Book {{ id }}?"
+            },
+            "detail": {
+                "title": "H Book"
+            },
+            "op": "Op",
+            "hi": "Hi",
+            "lo": "Lo",
+            "la": "La",
+            "day": "Day",
+            "vol": "Vol",
+            "pc": "Pc",
+            "time": "Time",
+            "collector": "Collector"
+        }
+    }
+}

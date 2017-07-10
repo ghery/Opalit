@@ -1,0 +1,195 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myTransactionLabel" data-translate="opalitApp.transaction.home.createOrEditLabel">Create or edit a Transaction</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.transaction.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.transaction.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="opalitApp.transaction.idPosition" for="field_idPosition">Id Position</label>
+            <input type="number" class="form-control" name="idPosition" id="field_idPosition"
+                    ng-model="vm.transaction.idPosition"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="opalitApp.transaction.price" for="field_price">Price</label>
+            <input type="number" class="form-control" name="price" id="field_price"
+                    ng-model="vm.transaction.price"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="opalitApp.transaction.quantity" for="field_quantity">Quantity</label>
+            <input type="number" class="form-control" name="quantity" id="field_quantity"
+                    ng-model="vm.transaction.quantity"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="opalitApp.transaction.type" for="field_type">Type</label>
+            <input type="number" class="form-control" name="type" id="field_type"
+                    ng-model="vm.transaction.type"
+                    required/>
+            <div ng-show="editForm.type.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.type.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.type.$error.number" data-translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="opalitApp.transaction.status" for="field_status">Status</label>
+            <input type="number" class="form-control" name="status" id="field_status"
+                    ng-model="vm.transaction.status"
+                    required/>
+            <div ng-show="editForm.status.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.status.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.status.$error.number" data-translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="opalitApp.transaction.tradeDate" for="field_tradeDate">Trade Date</label>
+                <div class="input-group">
+                    <input id="field_tradeDate" type="text" class="form-control" name="tradeDate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.transaction.tradeDate" is-open="vm.datePickerOpenStatus.tradeDate"
+                    required/>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('tradeDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+            <div ng-show="editForm.tradeDate.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.tradeDate.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="opalitApp.transaction.settlementDate" for="field_settlementDate">Settlement Date</label>
+                <div class="input-group">
+                    <input id="field_settlementDate" type="text" class="form-control" name="settlementDate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.transaction.settlementDate" is-open="vm.datePickerOpenStatus.settlementDate"
+                    required/>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('settlementDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+            <div ng-show="editForm.settlementDate.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.settlementDate.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="opalitApp.transaction.amount" for="field_amount">Amount</label>
+            <input type="number" class="form-control" name="amount" id="field_amount"
+                    ng-model="vm.transaction.amount"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="opalitApp.transaction.marketFees" for="field_marketFees">Market Fees</label>
+            <input type="number" class="form-control" name="marketFees" id="field_marketFees"
+                    ng-model="vm.transaction.marketFees"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="opalitApp.transaction.brokerFees" for="field_brokerFees">Broker Fees</label>
+            <input type="number" class="form-control" name="brokerFees" id="field_brokerFees"
+                    ng-model="vm.transaction.brokerFees"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="opalitApp.transaction.clientFees" for="field_clientFees">Client Fees</label>
+            <input type="number" class="form-control" name="clientFees" id="field_clientFees"
+                    ng-model="vm.transaction.clientFees"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="opalitApp.transaction.forexSpot" for="field_forexSpot">Forex Spot</label>
+            <input type="number" class="form-control" name="forexSpot" id="field_forexSpot"
+                    ng-model="vm.transaction.forexSpot"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="opalitApp.transaction.comments" for="field_comments">Comments</label>
+            <input type="text" class="form-control" name="comments" id="field_comments"
+                    ng-model="vm.transaction.comments"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="opalitApp.transaction.boComment" for="field_boComment">Bo Comment</label>
+            <input type="text" class="form-control" name="boComment" id="field_boComment"
+                    ng-model="vm.transaction.boComment"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="opalitApp.transaction.cfd" for="field_cfd">Cfd</label>
+                <input type="checkbox" name="cfd" id="field_cfd"
+                          ng-model="vm.transaction.cfd"/>
+        </div>
+
+        <div class="form-group">
+            <label data-translate="opalitApp.transaction.book" for="field_book">Book</label>
+            <select class="form-control" id="field_book" name="book" ng-model="vm.transaction.book" ng-options="book as book.id for book in vm.books track by book.id" required>
+            </select>
+        </div>
+        <div ng-show="editForm.book.$invalid">
+            <p class="help-block"
+                ng-show="editForm.book.$error.required" data-translate="entity.validation.required">
+                This field is required.
+            </p>
+        </div>
+        <div class="form-group">
+            <label data-translate="opalitApp.transaction.asset" for="field_asset">Asset</label>
+            <select class="form-control" id="field_asset" name="asset" ng-model="vm.transaction.asset" ng-options="asset as asset.id for asset in vm.assets track by asset.id" required>
+            </select>
+        </div>
+        <div ng-show="editForm.asset.$invalid">
+            <p class="help-block"
+                ng-show="editForm.asset.$error.required" data-translate="entity.validation.required">
+                This field is required.
+            </p>
+        </div>
+        <div class="form-group">
+            <label data-translate="opalitApp.transaction.currency" for="field_currency">Currency</label>
+            <select class="form-control" id="field_currency" name="currency" ng-model="vm.transaction.currency" ng-options="currency as currency.id for currency in vm.currencies track by currency.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="opalitApp.transaction.broker" for="field_broker">Broker</label>
+            <select class="form-control" id="field_broker" name="broker" ng-model="vm.transaction.broker" ng-options="people as people.id for people in vm.people track by people.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="opalitApp.transaction.primebroker" for="field_primebroker">Primebroker</label>
+            <select class="form-control" id="field_primebroker" name="primebroker" ng-model="vm.transaction.primebroker" ng-options="people as people.id for people in vm.people track by people.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

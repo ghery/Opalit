@@ -1,0 +1,21 @@
+{
+    "opalitApp": {
+        "zone" : {
+            "home": {
+                "title": "Zones",
+                "createLabel": "Créer un nouveau Zone",
+                "createOrEditLabel": "Créer ou éditer un Zone"
+            },
+            "created": "Un nouveau Zone a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Zone avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Zone avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Zone {{ id }} ?"
+            },
+            "detail": {
+                "title": "Zone"
+            },
+            "name": "Name"
+        }
+    }
+}

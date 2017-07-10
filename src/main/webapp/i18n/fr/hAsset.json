@@ -1,0 +1,29 @@
+{
+    "opalitApp": {
+        "hAsset" : {
+            "home": {
+                "title": "HAssets",
+                "createLabel": "Créer un nouveau H Asset",
+                "createOrEditLabel": "Créer ou éditer un H Asset"
+            },
+            "created": "Un nouveau H Asset a été créé avec l'identifiant {{ param }}",
+            "updated": "Le H Asset avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le H Asset avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le H Asset {{ id }} ?"
+            },
+            "detail": {
+                "title": "H Asset"
+            },
+            "op": "Op",
+            "hi": "Hi",
+            "lo": "Lo",
+            "la": "La",
+            "day": "Day",
+            "vol": "Vol",
+            "pc": "Pc",
+            "time": "Time",
+            "collector": "Collector"
+        }
+    }
+}
